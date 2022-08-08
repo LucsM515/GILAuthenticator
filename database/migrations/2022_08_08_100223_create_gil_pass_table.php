@@ -15,7 +15,9 @@ class CreateGilPassTable extends Migration
     {
         Schema::create('gil_pass', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('password');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
