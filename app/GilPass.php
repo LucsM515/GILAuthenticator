@@ -11,4 +11,5 @@ class GilPass extends Model
     protected $table = "gil_pass";
     protected $fillable = ["password"];
     protected $dates = ['deleted_at'];
+    protected $hidden = ['created_at','id','updated_at', 'deleted_at'];
 }

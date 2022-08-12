@@ -4,28 +4,28 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card gil-form-body">
-                <div class="card-header gil-nav-bar gil-card-font">{{ __('Login') }}</div>
+            <div class="card gil-form-body gil-mid-card ">
+                <div class="card-header gil-nav-bar gil-bold-white">{{ __('Efetuar Login') }}</div>
 
                 <div class="card-body ">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row gil-bold-black">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 ">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback " role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row gil-bold-black">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
@@ -53,16 +53,16 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn  gil-button">
+                                <button type="submit" class="btn  gil-button gil-bold-white">
                                     {{ __('Login') }}
                                 </button>
 
-                                {{-- @if (Route::has('password.request'))
-                                    <a class="btn  gil-forgote-password" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                @if (Route::has('register'))
+                                    <a class="btn  gil-forgote-password gil-bold-black " href="{{ route('register') }}">
+                                        {{ __('Registre-se') }}
                                     </a>
-                                @endif --}}
-                            </div>
+                                @endif
+                                
                         </div>
                     </form>
                 </div>

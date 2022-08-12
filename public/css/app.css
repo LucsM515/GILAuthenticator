@@ -11029,3 +11029,17 @@ a.text-dark:focus {
   font-size: 60px;
 }
 
+.gil-size-nav {
+  font-size: 15px;
+}
+
+.gil-bold-black {
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold !important;
+}
+
+.gil-bold-white {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+

@@ -49,11 +49,18 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+        return Validator::make(
+            $data,
+            [
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'ends_with:@ubersistemas.com.br,@upgestao.com.br', 'unique:users'],
+            ],
+            [
+                'email.ends_with'=> 'Dominio inválido!',
+                'email.required'=> 'O e-mail é obrigatório!!!!',
+                
+            ]
+        );
     }
 
     /**
