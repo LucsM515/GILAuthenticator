@@ -18,4 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/homesenha', 'GilPassController@Index')->name('senha');
+Route::get('/password-home', 'GilPassController@Index')->name('password');
