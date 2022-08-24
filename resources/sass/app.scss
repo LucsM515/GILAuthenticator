@@ -9,37 +9,37 @@
 
 
 .gil-nav-bar {
-    background-color:rgb(255, 157, 60) !important;
+    background-color: rgb(255, 157, 60) !important;
 }
 
-.gil-font{
+.gil-font {
     font-size: 30px !important;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    color:rgb(255,255,255) !important;
+    color: rgb(255, 255, 255) !important;
 }
 
-.gil-text{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    color:rgb(255,255,255) !important;
+.gil-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255) !important;
 }
 
-.gil-form-body{
+.gil-form-body {
     background-color: rgb(239, 239, 239) !important;
 }
 
-.gil-text-body{
-    color:rgb(0, 0, 0);
+.gil-text-body {
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
 .gil-button {
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     background-color: rgb(255, 157, 60);
 }
 
 .gil-forgote-password {
-    color:rgb(0, 0, 0)
+    color: rgb(0, 0, 0)
 }
 
 .gil-card-font {
@@ -48,82 +48,146 @@
 
 .gil-your-password {
     font-size: 19px !important;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
 .gil-mid-text {
-   
-    text-align:center;
- }
 
- .gil-mid-card {
+    text-align: center;
+}
+
+.gil-mid-card {
     margin-top: 99px;
-    margin-bottom:50px ;
+    margin-bottom: 50px;
     margin-left: 25px;
     margin-right: 25px;
 
-    margin: 3 auto; 
-        float: none; 
-       
- }
+    margin: 3 auto;
+    float: none;
 
- .gil-number {
-    font-size: 60px;
- }
+}
 
- .gil-size-nav {
+.gil-number {
+    font-size: 40px;
+}
+
+.gil-size-nav {
     font-size: 15px;
- }
+}
 
- .gil-bold-black {
-    
-    color: rgb(0, 0, 0) !important; 
+.gil-bold-black {
+
+    color: rgb(0, 0, 0) !important;
     font-weight: bold !important;
- }
+}
 
- .gil-bold-white {
-    color:rgb(255, 255, 255);
+.gil-bold-white {
+    color: rgb(255, 255, 255);
     font-weight: bold;
- }
- .gil-background-color {
-    background-color:rgb(255, 157, 60) !important;
- }
+}
 
- .gil-background-color-item {
-    background-color:rgb(255, 157, 60) !important;
- }
+.gil-background-color {
+    background-color: rgb(255, 157, 60) !important;
+}
 
- .gil-background-color-item:hover {
-    background-color:rgb(255, 255, 255) !important;
- }
+.gil-background-color-item {
+    background-color: rgb(255, 157, 60) !important;
+}
 
- .gil-password-layout {
+.gil-background-color-item:hover {
+    background-color: rgb(255, 255, 255) !important;
+}
 
-    
-    width:600px;
-    height:250px;
-    margin-left:-60px;
-    margin-top:70px;
+.gil-password-layout {
+
+
+    width: 600px;
+    height: 250px;
+    margin-left: -60px;
+    margin-top: 70px;
     position: fixed;
     overflow: auto;
-   
-    
 
- }
 
- .gil-password-layout-left {
+
+}
+
+.gil-password-layout-left {
     width: 300px;
     height: 600px;
     padding: 0px;
     background-color: #f1f1f1;
     position: fixed;
     overflow: auto;
-    margin-left:0;
-    margin-top:-22px;
-   
-      
- }
+    margin-left: 0;
+    margin-top: -22px;
+}
 
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+    margin: relative;
+}
+
+.center-card{
+    margin-top: 200px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
   
-
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
