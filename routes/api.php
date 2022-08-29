@@ -31,10 +31,10 @@ use Illuminate\Http\Request;
 
 // });
 
-Route::middleware(['api'])->group(function (){
-    Route::get('get-pass','PasswordController@index');
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
+Route::middleware(['api'])->prefix('v1')->group(function (){
+    Route::get('get-pass','v1\PasswordController@index');
+    Route::post('login', 'v1\AuthController@login');
+    Route::post('logout', 'v1\AuthController@logout');
+    Route::post('refresh', 'v1\AuthController@refresh');
+    Route::post('me', 'v1\AuthController@me');
 });

@@ -1,7 +1,7 @@
 # GIL Authenticator
 Software para geração de senhas randomicas para o sistema GIL
  ## Endpoint responsável por pegar as informações de login dos usuários.
- Endpoint:{base_url}/api/login </br>
+ Endpoint:{base_url}/api/v1/login </br>
  Tipo de Requisição: POST
  Parâmetro|Obrigatório|Escopo|Observação|
  ----|-----|----|------|
@@ -23,7 +23,7 @@ Software para geração de senhas randomicas para o sistema GIL
 
 
   ## Endpoint responsável por deslogar o usuario do sistema.
- Endpoint:{base_url}/api/logout </br>
+ Endpoint:{base_url}/api/v1/logout </br>
  Tipo de Requisição: POST
   >Retorno
 
@@ -40,7 +40,7 @@ Software para geração de senhas randomicas para o sistema GIL
  
 
   ## Endpoint responsável por gerar uma senha aleatória a cada dia é mostrar para o usuário.
- Endpoint:{base_url}/api/get-pass </br>
+ Endpoint:{base_url}/api/v1/get-pass </br>
  Tipo de Requisição: GET
   >Retorno
 
